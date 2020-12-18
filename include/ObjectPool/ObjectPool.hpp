@@ -8,6 +8,16 @@
  */
 
 
+#define SNJ_MAKE_NONCOPYABLE(c)\
+private:                       \
+  c(const c&) noexcept = delete;\
+  c& operator=(const c&) noexcept = delete
+
+#define SNJ_MAKE_NONMOVABLE(c)\
+private:                      \
+  c(c&&) noexcept = delete;   \
+  c& operator=(c&&) noexcept = delete
+
 #include <stdint.h>
 #include <utility>
 #include <cstddef>
@@ -119,10 +129,8 @@ namespace Utils {
 
   //Life cycle management
   ~ObjectPool() = default;
-  ObjectPool(const ObjectPool&) = delete;
-  ObjectPool(ObjectPool&&) = delete;
-  ObjectPool operator=(const ObjectPool&) = delete;
-  ObjectPool operator=(ObjectPool&&) = delete;
+  SNJ_MAKE_NONCOPYABLE(ObjectPool);
+  SNJ_MAKE_NONMOVABLE(ObjectPool);
    
  public:  
   //This is the constructor

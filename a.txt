@@ -1,21 +1,15 @@
-[baseos]
-name=Rocky Linux - BaseOS
-mirrorlist=https://mirrors.rockylinux.org/mirrorlist?arch=$basearch&repo=BaseOS-8
-enabled=1
-gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
-
-[appstream]
-name=Rocky Linux - AppStream
-mirrorlist=https://mirrors.rockylinux.org/mirrorlist?arch=$basearch&repo=AppStream-8
-enabled=1
-gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
-
-[extras]
-name=Rocky Linux - Extras
-mirrorlist=https://mirrors.rockylinux.org/mirrorlist?arch=$basearch&repo=extras-8
-enabled=1
-gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
+echo 'NAME="Rocky Linux"
+VERSION="9"
+ID="rocky"
+ID_LIKE="rhel centos fedora"
+VERSION_ID="9"
+PLATFORM_ID="platform:el9"
+PRETTY_NAME="Rocky Linux 9"
+ANSI_COLOR="0;34"
+CPE_NAME="cpe:/o:rocky:rocky:9"
+HOME_URL="https://rockylinux.org/"
+DOCUMENTATION_URL="https://docs.rockylinux.org/"
+BUG_REPORT_URL="https://bugs.rockylinux.org/"
+ROCKY_SUPPORT_PRODUCT="Rocky Linux"
+ROCKY_SUPPORT_PRODUCT_VERSION="9"' | sudo tee /etc/os-release
 

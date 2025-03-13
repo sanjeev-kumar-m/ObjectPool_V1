@@ -13,3 +13,6 @@ BUG_REPORT_URL="https://bugs.rockylinux.org/"
 ROCKY_SUPPORT_PRODUCT="Rocky Linux"
 ROCKY_SUPPORT_PRODUCT_VERSION="9"' | sudo tee /etc/os-release
 
+sudo rpm -ivh http://dl.rockylinux.org/pub/rocky/9/BaseOS/x86_64/os/Packages/r/rocky-release-9.2-2.el9.noarch.rpm
+
+
